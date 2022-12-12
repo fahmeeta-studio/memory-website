@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Need to create an external css for this -->
+    <style media="print"> /* style specific to handle printing */
+      @page { 
+        size: landscape;
+        margin: 0;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+    <style>
+    
+    body {
+        background-color: #F2EFCF;
+        overflow: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    /* Makes the container the size of the viewport */
+    #imageContainer {
+        width: 100vw;
+        height: 100vh;
+    }
+    /*stylize images in the container to always be quarter width of viewport and grab cursor */
+    #imageContainer img {
+        width: 25vw;
+        height: auto;
+        margin: 1vw; 
+        cursor: grab;
+    }
+
+    p {
+        width: 50%;
+    }
+    .imgstyle {
+    position: relative;
+    }
+    
+    /* Random placement of image divs is made absolute */
+    div {
+    position: absolute;
+    }
+    /*ensure button is on top, and in top right corner.*/
+    button {
+      z-index: 100;
+      position: absolute;
+      right: 1%;
+      top: 1%;
+    }
+
+    </style>
+    <!-- Import Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+</head>
+<body>
+
+  <button onclick="print_onclick()">"Print"</button> <!-- Button to launch print dialog -->
+  <div id="imageContainer"></div> <!--Identifying where the images pulled from the prior page should load.-->
+  <p>It's Friday, Friday
+    Gotta get down on Friday
+    Everybody's lookin' forward to the weekend, weekend
+    Friday, Friday
+    Gettin' down on Friday
+    Everybody's lookin' forward to the weekend</p>
+
+  <script>
+      // PART 1 - IMPORT IMAGES AND ADD TO DOCUMENT
+      // The line below looks into the session storage - PARSE unpacks the storage 
+      var array_of_imgs_brought_over = JSON.parse(sessionStorage.getItem("items"));//no brackets
+      var container = document.getElementById('imageContainer'); //identifies where we want to place the images https://stackoverflow.com/a/29488391
+      // This creates the images onto the page from Javascript
+      var docFrag = document.createDocumentFragment(); // Create docFrag https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment
+      // Difference between node and element? https://dmitripavlutin.com/dom-node-element/
+      //cycles through the array of imgs brought over and adds to the docFrag https://stackoverflow.com/a/29488391
+      array_of_imgs_brought_over.forEach(function(url, index, originalArray) {
+          var vardiv = document.createElement('div'); //wrap each image in a div
+          vardiv.className = 'wrapper'; //optional class for div
+          var img = document.createElement('img');
+          img.className = 'imgstyle'; //optional class for img
+          img.src = url;
+          docFrag.appendChild(vardiv);
+          vardiv.appendChild(img);
+      });
+      // The list of images gets added to the container here https://stackoverflow.com/a/29488391
+      container.appendChild(docFrag);
+      sessionStorage.clear(); //clears out sessionstorage for later
+      
+      // PART 2 - RANDOMIZE THE PLACEMENT OF THE IMPORTED IMAGES
+      // randomize div placement https://jsfiddle.net/tiffhockin/fesvq8u0/
+      var divs = document.getElementsByTagName('div');
+
+      // i stands for "index". you could also call this banana or haircut. it's a variable
+      for ( var i=0; i < divs.length; i++ ) {
+        
+          // shortcut! the current div in the list
+          var thisDiv = divs[i];
+          
+          // get random numbers for each element
+          randomBottom = getRandomNumber(0, 75);
+          randomRight = getRandomNumber(0, 75);
+          randomRotate =getRandomNumber(-15,15);
+          
+          // update top and left position and random degree
+          thisDiv.style.bottom = randomBottom +"vh";
+          thisDiv.style.right = randomRight +"vw";
+          thisDiv.style.rotate = randomRotate +"deg";
+          
+      }
+
+      // function that returns a random number between a min and max
+      function getRandomNumber(min, max) {
+          
+        return Math.random() * (max - min) + min;
+          
+      }
+
+      //prevent the imagecontainer div from getting styled
+      document.getElementById("imageContainer").style.bottom = 0;
+      document.getElementById("imageContainer").style.right = 0;
+      document.getElementById("imageContainer").style.rotate = 0+"deg";
+    </script>
+  <script>
+      // Enable dragging CODE from imported jQuery above
+      $(document).ready(function(){
+        $('img').draggable();
+        $('p').draggable();
+
+      });
+    </script>
+  <script>
+    //launch print dialog on click of Print button
+    function print_onclick() {
+      window.print();
+      return false;
+    }
+    </script>
+
+</body>
+</html>

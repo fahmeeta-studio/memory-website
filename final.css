@@ -1,0 +1,347 @@
+body{
+  background-color: #F2EFCF;
+  height: 100%; /* match the interactive body to window size */
+  width: 100%;/* match the interactive body to window size */
+}
+/* This controls the main images */
+#main {
+  height: 100%; /* match the interactive body to window size */
+  width: 100%; /* match the interactive body to window size */
+  margin: 0 auto; /* prevent funky extra space */
+}
+
+/* First 10 minute timer */
+.initial_10_minutes {
+  animation: fadeOut ease 600s;
+  animation-fill-mode: forwards;
+}
+/* Second timer once interaction takes place */
+.long_fade{
+  animation: fadeOut ease 3600s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} 
+/* First timer 10 minutes style */
+#clockdiv_10min {
+  /* position: absolute;
+  top: 1%;
+  right: 1%; */
+  position: absolute;   
+  width: 272px;
+  height: 50px;
+  left: 1155px;
+  top: 13px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #95973E;
+}
+/* First timer 60 minutes style */
+#clockdiv_hour {
+  /* position: fixed;
+  top: 1%;
+  right: 1%; */
+  position: absolute;   
+  width: 272px;
+  height: 50px;
+  left: 1155px;
+  top: 13px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #95973E;
+}
+
+.img_1{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  bottom: 40%;
+  right: 8%;
+}
+
+.img_2{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  bottom: 0px;
+}
+
+.img_3{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  right: 40%;
+  bottom: 0;
+  width: 25%;
+}
+
+.img_4{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  right: 20%;
+  top: 30%;
+  width: 25%;
+}
+
+.img_5{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 7%;
+  top: 9%;
+  width: 25%;
+}
+
+.img_6{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  right: 10%;
+  top: 10%;
+  width: 25%;
+}
+
+.img_7{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 10%;
+  left: 25%;
+  width: 25%;
+}
+
+.img_8{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 15%;
+  left: 60%;
+  width: 25%;
+}
+
+.img_9{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 30%;
+  width: 25%;
+  left: 6%;
+}
+
+.img_11{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 10%;
+  left:75%;
+  width: 25%;
+}
+
+.text{
+  position: absolute;   
+  width: 272px;
+  height: 50px;
+  left: 1155px;
+  top: 13px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #95973E;
+}
+
+/* Hover opacity for each image */
+#myImg1 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg1:hover {opacity: 0.7 !important;}
+
+#myImg2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg2:hover {opacity: 0.7 !important;}
+
+#myImg3 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg3:hover {opacity: 0.7 !important;}
+
+#myImg4 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg4:hover {opacity: 0.7 !important;}
+
+#myImg5 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg5:hover {opacity: 0.7 !important;}
+
+#myImg6 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg6:hover {opacity: 0.7 !important;}
+
+#myImg7 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg7:hover {opacity: 0.7 !important;}
+
+#myImg8 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg8:hover {opacity: 0.7 !important;}
+
+#myImg9 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg9:hover {opacity: 0.7 !important;}
+
+#myImg11 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg11:hover {opacity: 0.7 !important;}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100vw; 
+  height: 100vh;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content-panel {
+  /* display: inline-block; */
+  position: absolute;
+  width: 50%;
+  height: 75vh;
+  background-position: center;
+  background-size: cover; 
+}
+
+.modal-content-frontimg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 90%;
+  max-height: 50%;
+  display: block;
+  margin: auto;
+  /* overflow:hidden; */
+}
+
+/* Model content for the text */
+#caption {
+  text-align: center;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  color: #ccc;
+  padding: 5vh 0;
+  /* height: 150px; */
+}
+
+/* Animation for pop-up of images */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #4F2929;
+  font-size: 100px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="final.css" />
+  <title>Fear of Forgetting</title>
+  <!-- Import Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+</head>
+<body>
+  <!-- This is the main div of images and timers. On press of mouse, fade elongates -->
+  <div id="main">
+    <img id="myImg1" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_1 initial_10_minutes" src="img/alien.png">
+    <img id="myImg2" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_2 initial_10_minutes" src="img/andywarhol.png"> 
+    <img id="myImg3" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_3 initial_10_minutes" src="img/cat.png">
+    <img id="myImg4" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_4 initial_10_minutes" src="img/david.png">
+    <img id="myImg5" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_5 initial_10_minutes" src="img/fan.png">
+    <img id="myImg6" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_6 initial_10_minutes" src="img/yellowcity.png">
+    <img id="myImg7" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_7 initial_10_minutes" src="img/pinkcouch.png">
+    <img id="myImg8" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_8 initial_10_minutes" src="img/pot.png">
+    <img id="myImg9" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_9 initial_10_minutes" src="img/profileperson.jpg">
+    <img id="myImg11" alt="Text for the image, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." class="img_11 initial_10_minutes" src="img/spiralstairs.png"> 
+    <div id="clockdiv_10min"></div> <!-- This is the 10min timer div, refer to timer.js-->
+    <div id="clockdiv_hour" style="display:none"></div> <!-- This is the 1hr timer div, refer to timer.js-->
+  </div>
+
+  <!-- button to skip to printout page - MUST REMOVE ONCE WEBSITE IS FINAL -->
+  <a id="skip" href="secondpage.html" onclick="send_selected_images()"><button>Skip</button></a>  <!-- send_selected_images function below -->
+  
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div id ="modal-content-panel-01" class="modal-content-panel">
+      <img id="img01" class="modal-content-frontimg">
+    </div>
+    <div id ="modal-content-panel-02" class="modal-content-panel" style="position:relative; left:50%">
+      <img id="img02" class="modal-content-frontimg"> 
+    </div>
+    <div id="caption"></div>
+  </div>
+
+</body>
+
+<!-- JAVASCRIPTS!! -->
+
+<!-- This script controls the timers and the function to switch from 10min to 1hr timer -->
+<script src="timer.js"></script> 
+
+<!-- This script enables dragging and click to open modal -->
+<script>
+  //jQuery imported at top of html
+  $(document).ready(function(){ //A page can't be manipulated safely until the document is "ready." https://learn.jquery.com/using-jquery-core/document-ready/
+    // Enable dragging
+    $('img').draggable(); //jQuery selects all 'img' types and enables dragging
+    //Clicking images opens the modal. Very important to put
+    //after .draggable as other methods opens modal at end of 
+    //dragging
+    //https://www.w3schools.com/jquery/event_click.asp
+    $("#myImg1").click(img1modal); //selects div ID #myImg and on click, executes function img1modal
+    $("#myImg2").click(img2modal);
+    $("#myImg3").click(img3modal);
+    $("#myImg4").click(img4modal);
+    $("#myImg5").click(img5modal);
+    $("#myImg6").click(img6modal);
+    $("#myImg7").click(img7modal);
+    $("#myImg8").click(img8modal);
+    $("#myImg9").click(img9modal);
+    $("#myImg11").click(img11modal);
+  });
+</script>
+
+<!-- Tracks the opened modals and at end of session, filters for unique images and sends to next page -->
+<script>
+  const selected_images = [] //this is a javascript array
+//   This sends the curated list to the second page for printing SESSION STORAGE
+  function send_selected_images() {
+    // This makes sure that there are no duplicates if you click on something twice.
+    let unique_selected_images = [...new Set(selected_images)]; //https://stackoverflow.com/a/9229821
+    window.sessionStorage.setItem("items", JSON.stringify(unique_selected_images)); //A common use of JSON is to exchange data to/from a web server. When sending data to a web server, the data has to be a string. Convert a JavaScript object into a string with JSON.stringify(). https://www.w3schools.com/jsref/prop_win_sessionstorage.asp
+  }
+</script>
+
+<!-- All the scripts below control modal content -->
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg1");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img1modal(){ //this is called in the jQuery draggable script above when image is clicked instead of dragged
+    modal.style.display = "block"; //modal by default is display:none;
+    modalImg.src = this.src; //set first img as the img that was clicked on
+    secondImg.src = "img/alienmask.png"; //paired image
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/alienmask.png')"; // sets the background image for the modal content panel on the left
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/alien.png')"; // sets the background image for the modal content panel on the right
+    captionText.innerHTML = this.alt; //the alt text is used for the caption
+    // This adds the image to the selected_images list to be later sent to the next page
+    selected_images.push(modalImg.src); //push() adds to javascript array https://www.w3schools.com/jsref/jsref_push.asp
+    // This adds the image to the selected_images list to be later sent to the next page
+    selected_images.push(secondImg.src); //push() adds to javascript array https://www.w3schools.com/jsref/jsref_push.asp
+    // How to stop the css animation - this stops the fade
+    document.getElementById("myImg1").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg2");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img2modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/party.jpeg";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/party.jpeg')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/andywarhol.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg2").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg3");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img3modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/kity.png";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/kitty.png')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/cat.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg3").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg4");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img4modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/davidart.png";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/davidart.png')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/david.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg4").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg5"); 
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img5modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/fanhair.png";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/fanhair.png')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/fan.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg5").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg6");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img6modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/orangecity.jpeg";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/orangecity.jpeg')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/yellowcity.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg6").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg7");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img7modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/marinepot.png";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/marinepot.png')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/pot.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg7").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg8");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img8modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/yellowcouch.png";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/yellowcouch.png')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/pinkcouch.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg8").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg9");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img9modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/profileshadow.JPG";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('img/profileshadow.JPG')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/profileperson.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg9").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg11");
+  var modalImg = document.getElementById("img01");
+  var secondImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  function img11modal(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    secondImg.src = "img/spiralceiling.jpeg";
+    document.getElementById("modal-content-panel-01").style.backgroundImage = "url('spiralceiling.jpeg')";
+    document.getElementById("modal-content-panel-02").style.backgroundImage = "url('img/spiralstairs.png')";
+    captionText.innerHTML = this.alt;
+    selected_images.push(modalImg.src);
+    selected_images.push(secondImg.src);
+    document.getElementById("myImg11").style.animationPlayState = 'paused';
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
+</html>
